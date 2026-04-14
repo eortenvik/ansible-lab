@@ -5,6 +5,10 @@
 - name: Test playbook
   hosts: localhost
   connection: local
+  vars_files:
+
+  - /vagrant/secrets.yml
+  - ansible/vars/main.yml
   vars:
    app_environment: "lab"
   tasks:
